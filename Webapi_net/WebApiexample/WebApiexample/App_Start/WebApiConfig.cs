@@ -19,6 +19,11 @@ namespace WebApiexample
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            //var a =config.Formatters.ToList();
+          
+            //config.Formatters.JsonFormatter.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
+
         }
     }
 }
